@@ -8,9 +8,10 @@ import { BASE_URL } from '../../Auth/Auth';
 const DataCard = ({ dates, add }) => {
     const [userData, setData] = useState([]);
 
-    const fetchItems = async () => {
+
+    useEffect(() => {
         try {
-            await axios.get(`${BASE_URL}/api/food/get/${dates}/${getMemberId()}`)
+            axios.get(`${BASE_URL}/api/food/get/${dates}/${getMemberId()}`)
                 .then((response) => {
                     setData(response.data);
                 })
@@ -18,12 +19,8 @@ const DataCard = ({ dates, add }) => {
         } catch (error) {
             console.log(error);
         }
-    }
-
-
-    useEffect(() => {
-        fetchItems();
-    }, [dates, add])
+        console.log(1);
+    }, [add, dates])
 
 
 

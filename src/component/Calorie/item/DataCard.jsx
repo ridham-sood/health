@@ -22,7 +22,6 @@ const DataCard = ({ dates, add }) => {
 
 
     useEffect(() => {
-        fetchItems();
     }, [dates, add])
 
 

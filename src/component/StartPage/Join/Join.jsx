@@ -42,10 +42,10 @@ function Join() {
                     setName('')
                     setEmail('')
                     setPassword('')
-                    const myTimeout = setTimeout(() => {
+                    setTimeout(() => {
                         navigate('/Thanks')
                     }, 500);
-                } else if (response.data.message == "Email Already Exist") {
+                } else if (response.data.message === "Email Already Exist") {
                     alert(response.data.message)
                 } else {
                     alert(response.data.message)

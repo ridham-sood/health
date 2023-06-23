@@ -3,7 +3,7 @@ import React from 'react'
 import {useNavigate } from "react-router-dom";
 
 function Thanks() {
-    const myTimeout = setTimeout(homeRedirect, 1000);
+    setTimeout(homeRedirect, 1000);
     const navigate = useNavigate();
 
     function homeRedirect(){

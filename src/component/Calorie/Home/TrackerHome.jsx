@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import DataCard from '../item/DataCard';
 import EntryCard from '../search/EntryCard';
 import './trackerhome.css';

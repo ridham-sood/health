@@ -16,7 +16,7 @@ const SearchBar = ({ setResults }) => {
     const handleChange = (value) => {
         setInputSearch(value);
         fetchData(value);
-        if (value.trim().length == 0) {
+        if (value.trim().length === 0) {
             setResults([]);
         }
     }

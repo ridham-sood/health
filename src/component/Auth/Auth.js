@@ -27,7 +27,7 @@ export const savingSession = (session) => {
 
 export const getMemberId = () => {
     const session = JSON.parse(sessionStorage.getItem('session'));
-    return (session.memberId != 0) ? session.memberId : 0; 
+    return (session.memberId !== 0) ? session.memberId : 0; 
 }
 
 

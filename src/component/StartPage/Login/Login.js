@@ -25,7 +25,7 @@ function Login() {
 
                 if (response.data.message === "Email Not Exists") {
                     alert("Email Not Exists");
-                } else if (response.data.message == "Login Success") {
+                } else if (response.data.message === "Login Success") {
                     doLogin(response.data.message)
                     savingSession(response.data.sessionDTO)
                     navigate("/health")

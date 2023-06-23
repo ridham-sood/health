@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getMemberId } from '../../Auth/Auth';
 import ItemCard from './ItemCard';
 import { BASE_URL } from '../../Auth/Auth';
@@ -21,14 +21,9 @@ const DataCard = ({ dates, add }) => {
     }
 
 
-    // useEffect(() => {
-    //     fetchItems();
-    // }, [dates, add])
-
-
-    setTimeout(() => {
+    useEffect(() => {
         fetchItems();
-    }, 500);
+    }, [dates, add])
 
 
 

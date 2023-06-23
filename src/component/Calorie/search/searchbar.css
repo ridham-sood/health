@@ -1,0 +1,30 @@
+.search-box {
+    /* width: fit-content;
+    height: fit-content;
+    position: relative; */
+}
+
+.input-search {
+    height: 50px;
+    width: 300px;
+    border-style: none;
+    border-radius: 0px;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    transition: all .5s ease-in-out;
+    background-color: transparent;
+    padding-right: 40px;
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary);
+}
+
+.input-search::placeholder {
+    color: var(--primary);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+    

@@ -1,0 +1,63 @@
+.container-join {
+    background-color: var(--background);
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: 1.5fr 2fr 1.5fr;
+}
+
+.container-join-title {
+    grid-column: 2 / 3;
+    font-size: 5.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary);
+    font-family: 'Bebas Neue', sans-serif;
+    opacity: 60%
+}
+
+
+.container-join-form {
+    
+    font-size: 1rem;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.form-join {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.form-join > input{
+    width: 100%;
+    border: 0;
+    border-radius: 3px;
+    margin: 5px 0px 10px 12px;
+}
+
+.join-button {
+    width: 30%;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.form-join > label {
+    color: var(--primary);
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: underline;
+    text-decoration-color: var(--underline);
+    text-decoration-thickness: 0.25rem;
+    text-decoration-skip-ink: none;
+    padding: 0rem;
+}
+
+.form-join > button {
+    border: 0;
+    border-radius: 3px;
+}

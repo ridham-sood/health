@@ -1,0 +1,5 @@
+.search-result-container>div {
+    font-size: 1.25rem;
+    color: var(--primary);
+    font-family: 'Bebas Neue', sans-serif;
+}

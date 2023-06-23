@@ -1,0 +1,91 @@
+.container-login {
+    background-color: var(--background);
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: 1.5fr 2fr 1.5fr;
+}
+
+.login-title {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-size: 5.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary);
+    font-family: 'Bebas Neue', sans-serif;
+    opacity: 60%
+}
+
+.login-form {
+    
+    font-size: 1rem;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.form-input>label {
+    color: var(--primary);
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: underline;
+    text-decoration-color: var(--underline);
+    text-decoration-thickness: 0.25rem;
+    text-decoration-skip-ink: none;
+    padding: 0rem;
+}
+
+.form-input {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 95%;
+}
+
+.form-input>input {
+    width: 100%;
+}
+
+.form-input>input {
+    width: 100%;
+    border: 0;
+    border-radius: 3px;
+    margin: 5px 0px 10px 12px;
+}
+
+.form-login-button {
+    width: 30%;
+    flex-direction: row;
+    border: 0;
+    border-radius: 3px;
+    margin-top: 2rem;
+}
+
+.form-login-button > button {
+    width: 100%;
+    border: 0;
+    border-radius: 3px;
+}
+
+@media only screen and (max-width: 400px) {
+    .container-login {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.03fr 1fr;
+    }
+
+    .login-title {
+        grid-column: 1;
+        grid-row: 1 / 2;
+    }
+    
+    .login-form {
+        grid-column: 1;
+        grid-row: 2 / 3;
+    }
+}

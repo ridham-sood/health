@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import Home from './component/StartPage/Home/Home';
+import Login from './component/StartPage/Login/Login';
+import Join from './component/StartPage/Join/Join';
+import Thanks from './component/StartPage/Thanks';
+import Health from './component/Main/Health/Health';
+import BMI from './component/Main/BMI/BMI';
+import Protected from './component/Auth/Protected';
+import DateSwitch from './component/Calorie/Home/TrackerHome';
+import CalorieTracker from './component/Calorie/CalorieTracker';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/join' element={<Join />} />
+          <Route path='/thanks' element={<Thanks />} />
+          <Route path='/health' element={<Protected Component={Health} />} />
+          <Route path='/bmi' element={<Protected Component={BMI} />} />
+          <Route path='/calorie' element={<Protected Component={CalorieTracker} />} >
+            <Route path='' element={<Protected Component={DateSwitch} />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
   );
 }
 
